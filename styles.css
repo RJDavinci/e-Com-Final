@@ -237,7 +237,7 @@ BEAUTIFUL
     opacity: 1;
 }
 
-.beautiful__input:focus {
+.beautiful__input:focus-within {
     border-color: rgb(100 21 255);
 }
 
@@ -863,3 +863,71 @@ PLANS
     opacity: 0.25;
     transform: matrix(1, 0, 0, 1, -125, 180);
 }
+
+/* 
+
+TESTIMONIALS
+
+*/
+
+.testimonials__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.testimonials_img {
+    position: relative;
+}
+
+.testimonials__subheading {
+    box-sizing: border-box;
+    margin-bottom: 16px;
+}
+
+.testimonials__heading {
+    letter-spacing: 1.2px;
+    line-height: 72px;
+    font-size: 48px;
+    font-weight: 900;
+}
+
+.slider {
+    margin-top: 40px;
+    width: 100%;
+    box-sizing: border-box;
+    touch-action: pan-y;
+    user-select: none;
+}
+
+.slider,
+.slider__track {
+    display: flex;
+}
+
+.slider,
+.slider__list,
+.slider__track {
+    display: block;
+    position: relative;
+    transform: translateZ(0);    
+}
+
+.slider__list {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.slider__track {
+    left: 0;
+    top: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 
+
+FAQS
+
+*/

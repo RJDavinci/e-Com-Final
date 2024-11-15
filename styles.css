@@ -755,8 +755,7 @@ PLANS
     background-image: linear-gradient(135deg, rgb(76, 81, 191) 0%, rgb(102, 126, 234) 100%);
 }
 
-.plan__highlight {
-  
+.plan__highlight {  
     border-style: solid;
     border-width: 0px;
     border-top-right-radius: 8px;
@@ -931,3 +930,81 @@ TESTIMONIALS
 FAQS
 
 */
+
+.faqs__subheading {
+    line-height: 24px;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+}
+
+.faqs__heading {
+    font-size: 48px;
+    letter-spacing: 1.2px;
+    line-height: 72px;
+}
+
+.faqs__para {
+    width: 100%;
+    text-align: center;
+    line-height: 26px;
+    margin-top: 16px;
+}
+
+.faqs__container {
+    margin-top: 48px;
+    line-height: 24px;
+    position: relative;
+}
+
+.question__textbox {
+    border-radius: 8px;
+    border-style: solid;
+    margin-top: 20px;
+    padding: 16px 40px;
+    transition-duration: .3s;
+}
+
+.question__textbox:hover {
+    background-color: rgb(226, 232, 240);
+    opacity: 1;
+}
+
+
+.question__textbox,
+.question__textarea,
+.faq__dropdownmenu {    
+    color: rgb(45, 55, 72);
+    border-color: rgb(226, 232, 240);
+    background-color: rgb(237, 242, 247);    
+    cursor: pointer;
+    user-select: none;   
+    line-height: 24px;
+}
+
+.question__textarea {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(237, 242, 247);
+}
+
+.faq__question {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 27px;
+}
+
+.faq__dropdownmenu {
+    margin-left: 8px;
+    transform: matrix(-1, 0, 0, -1, 0, 0);
+    transition-duration: .3s;
+    transform: none;
+}
+
+.dropdownmenu {
+    height: 24px;
+    width: 24px;
+    overflow-clip-margin: content-box;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}

@@ -246,8 +246,7 @@ BEAUTIFUL
     font-weight: 500;
     border: none;
     outline: none;
-    background-color: rgb(255, 255, 255);
-    
+    background-color: rgb(255, 255, 255);    
 }
 
 .beautiful__input--btn {    
@@ -880,12 +879,13 @@ TESTIMONIALS
 
 .testimonials__group {
     max-width: 100%;
-    margin: 64px auto;
+    margin: 64px 20px;
     
 }
 
 .testimonials_img {
     position: relative;
+    margin: 0px auto;
 }
 
 .testimonials__subheading {
@@ -946,13 +946,26 @@ TESTIMONIALS
     margin: 16px 0px 40px;
 }
 
+.testimony__custo--profile {
+    margin: auto 0px;
+}
+
+.testimony__custo--profile,
 .testimony__custo {
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
     align-items: center;
     text-align: center;
     max-width: 100%;
 }
+
+/*.author1,
+.author3,
+.author4,
+.author5 {
+    display: none;
+}*/
 
 .slider {
     margin-top: 40px;
@@ -998,7 +1011,7 @@ TESTIMONIALS
     align-items: flex-start;
     appearance: button;
     text-rendering: auto;
-    transition-duration: .3s;
+    transition-duration: .3s ease;
     color: rgb(100, 21, 255);
     background-color: rgb(237, 242, 247);
     cursor: pointer;
@@ -1014,6 +1027,12 @@ TESTIMONIALS
     border-image-slice: 100%;
     border-image-width: 1;
     user-select: none;
+}
+
+.testimory__arrow:hover {
+    background-color: rgb(226, 232, 240);
+    transform: scale(1);
+    opacity: 1;
 }
 
 /* 
@@ -1058,22 +1077,12 @@ FAQS
     margin-top: 20px;
     padding: 16px 40px;
     text-size-adjust: 100%;
-    transition: all 300ms;
+    transition: background-color 0.3s ease;
+    border: none;
+    outline: none;
 }
 
 .question__textbox:hover {
-    background-color: rgb(226, 232, 240);
-    transform: scale(1);
-    opacity: 1;
-}
-
-.question__textarea:hover {
-    background-color: rgb(226, 232, 240);
-    transform: scale(1);
-    opacity: 1;
-}
-
-.answer:hover {
     background-color: rgb(226, 232, 240);
     transform: scale(1);
     opacity: 1;
@@ -1087,6 +1096,8 @@ FAQS
     cursor: pointer;
     user-select: none;   
     line-height: 24px;
+    border: none;
+    outline: none;
 }
 
 .question__textarea {
@@ -1104,7 +1115,7 @@ FAQS
 .faq__dropdownmenu {
     margin-left: 8px;
     transform: matrix(-1, 0, 0, -1, 0, 0);
-    transition-duration: .3s;
+    transition-duration: .3s ease;
     transform: none;
 }
 

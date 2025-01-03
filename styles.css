@@ -885,14 +885,16 @@ TESTIMONIALS
 }
 
 .testimonials_img {
-    position: relative;
+    max-width: 100%;
+    display: block;
+    position: relative;    
 }
 
 .testimonials__group {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-direction: row;       
+    flex-direction: column;       
     position: relative;
     box-sizing: border-box;
     text-align: left;
@@ -1010,6 +1012,13 @@ TESTIMONIALS
     margin-top: 40px;
 }
 
+.author1,
+.author3,
+.author4,
+.author5 {
+    display: none;
+}
+
 .testimony__arrows {      
     display: flex; 
     justify-content: space-between;
@@ -1081,25 +1090,19 @@ FAQS
 
 .question__textbox {
     border-radius: 8px;
-    border-style: solid;
-    border-color: rgb(237, 242, 247);
     margin-top: 20px;
     padding: 16px 40px;
     text-size-adjust: 100%;
-    transition: background-color 0.3s ease;
-    border: none;
-    outline: none;
+    background-size: cover;
 }
 
 .question__textbox:hover {
     background-color: rgb(226, 232, 240);
     transform: scale(1);
-    opacity: 1;
+    opacity: 1;   
 }
 
 .question__textbox,
-.question__textarea,
-.faq__dropdownmenu,
 .answer {      
     background-color: rgb(237, 242, 247);
     cursor: pointer;
@@ -1109,26 +1112,26 @@ FAQS
     outline: none;
 }
 
-.question__textarea {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;        
-}
-
 .faq__question {
     font-size: 20px;
     font-weight: 600;
     line-height: 27px;
+    transition: background-color 0.3s ease;
 }
 
+.faq__question
 .faq__dropdownmenu {
-    margin-left: 8px;
-    transform: matrix(-1, 0, 0, -1, 0, 0);
+    position: absolute;
     transition-duration: .3s ease;
-    transform: none;
 }
 
-.dropdownmenu {
+.faq__dropdownmenu.active .arrow {
+    margin-left: 8px;
+    transform: rotate(180deg);
+    transform: matrix(-1, 0, 0, -1, 0, 0);    
+}
+
+.arrow {
     height: 24px;
     width: 24px;
     overflow-clip-margin: content-box;
@@ -1137,9 +1140,12 @@ FAQS
 }
 
 .answer {
+    max-height: 0;
+    overflow: hidden;
     font-size: 16px;
     margin-top: 16px;
     height: 78px;
     line-height: 26px;
     opacity: 1;
+    transition: max-height 0.3s ease;
 }

@@ -868,24 +868,40 @@ TESTIMONIALS
 
 */
 
-.testimonials__content,
-.testimonials__decription {
+.testimonials__decription,
+.testimonials__subheading,
+.testimonials__para {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-direction: column;
+    flex-direction: column;       
+    position: relative;
     line-height: 24px;
 }
 
-.testimonials__group {
-    max-width: 100%;
-    margin: 64px 20px;
-    
+.testimonials__content {
+    flex-direction: row;
+    padding: 96px 0px 96px 0px;
 }
 
 .testimonials_img {
     position: relative;
-    margin: 0px auto;
+}
+
+.testimonials__group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;       
+    position: relative;
+    box-sizing: border-box;
+    text-align: left;
+    line-height: 24px;
+    width: 100%;
+    min-width: 33.33%;
+    padding: 48px 0;
+    margin-left: 64px;
+    order: 9999;    
 }
 
 .testimonials__subheading {
@@ -900,14 +916,14 @@ TESTIMONIALS
 }
 
 .testimonials__para {
-    text-align: center;
+    text-align: left;
     font-size: 14px;
     line-height: 22.75px;
     margin: 24px 0px 0px;
 }
 
 .testimony__custo--img {
-    text-align: center;
+    text-align: left;
     margin: 4px 0px 0px;
     border-radius: 9999px;
     max-width: 100%;
@@ -919,20 +935,20 @@ TESTIMONIALS
 }
 
 .testimony__custo--info {
-    text-align: center;
+    text-align: left;
     line-height: 24px;
     margin-left: 24px;
 }
 
 .testimony__ratings {
-    text-align: center;
+    text-align: left;
     line-height: 24px;
     color: rgb(246, 173, 85);
     fill: rgb(246, 173, 85);
 }
 
 .testimony__heading {
-    text-align: center;
+    text-align: left;
     margin: 16px 0px 0px;
     line-height: 30px;
     font-size: 20px;
@@ -940,7 +956,7 @@ TESTIMONIALS
 }
 
 .testimony__quote {
-    text-align: center;
+    text-align: left;
     font-weight: 500px;
     line-height: 26px;
     margin: 16px 0px 40px;
@@ -960,76 +976,69 @@ TESTIMONIALS
     max-width: 100%;
 }
 
-/*.author1,
-.author3,
-.author4,
-.author5 {
-    display: none;
-}*/
-
-.slider {
+.slider__container {
     margin-top: 40px;
     width: 100%;
-    box-sizing: border-box;
-    touch-action: pan-y;
-    user-select: none;
-}
-
-.slider,
-.slider__track {
-    display: flex;
-}
-
-.slider,
-.slider__list,
-.slider__track {
-    display: block;
     position: relative;
-    transform: translateZ(0);    
-}
-
-.slider__list {
     overflow: hidden;
-    margin: 0;
-    padding: 0;
-}
-
-.slider__track {
-    left: 0;
-    top: 0;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.testimony__arrows {
-    display: flex;
-    text-align: center;
     user-select: none;
 }
 
-.testimory__arrow {
-    align-items: flex-start;
-    appearance: button;
-    text-rendering: auto;
-    transition-duration: .3s ease;
-    color: rgb(100, 21, 255);
-    background-color: rgb(237, 242, 247);
+.slider {
+    display: flex;
+    position: relative;
+    transition: trasform 0.3s ease-in-out; 
+}
+
+.slider__content {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testimony, .active {
+    box-sizing: border-box;
+    min-width: 33.33%;
+    padding: 20px;
+}
+.testimony {
+    display: flex;
+    flex-direction: row;   
+    display: block;
+    margin-top: 40px;
+}
+
+.testimony__arrows {      
+    display: flex; 
+    justify-content: space-between;
+}
+
+.testimony__arrows button {    
+    align-items: center;
+    justify-content: center;
+    stroke-width: 3px;
+    stroke: rgb(100, 21, 255);
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    user-select: none;
+}
+
+.prev, .next {       
+    color: rgb(100, 21, 255);    
     cursor: pointer;
     border-radius: 9999px;
-    border-image-repeat: stretch;
-    border-width: 0;
+    border: none;
     padding: 16px;
     margin: 0px 12px 0px;
     font-size: 16px;
     font-weight: 400;
-    font-stretch: 100%;
-    border-image-outset: 0;
-    border-image-slice: 100%;
-    border-image-width: 1;
+    font-stretch: 100%;    
     user-select: none;
 }
 
-.testimory__arrow:hover {
+.prev:hover, .next:hover {
     background-color: rgb(226, 232, 240);
     transform: scale(1);
     opacity: 1;
